@@ -69,7 +69,7 @@ ArcBox deploys five GitOps configurations onto the _ArcBox-K3s-Data_ cluster:
 
 ArcBox deploys several management and operations services that work with ArcBox's Azure Arc resources. One of these services is Microsoft Defender for Cloud that is deployed by installing the [Defender extension](https://learn.microsoft.com/azure/defender-for-cloud/defender-for-containers-enable?tabs=aks-deploy-portal%2Ck8s-deploy-cli%2Ck8s-verify-cli%2Ck8s-remove-arc%2Caks-removeprofile-api#protect-arc-enabled-kubernetes-clusters) on your Kubernetes cluster in order to start collecting security related logs and telemetry.
 
-### Hybrid Unified Operations
+### Unified Operations
 
 ArcBox deploys several management and operations services that work with ArcBox's Azure Arc resources. These resources include an an Azure Automation account, an Azure Log Analytics workspace, an Azure Monitor workbook, Azure Policy assignments for deploying Kubernetes cluster monitoring and security extensions on the included clusters, Azure Policy assignment for adding tags to resources, and a storage account used for staging resources needed for the deployment automation.
 
@@ -427,7 +427,7 @@ ArcBox uses a GitOps configuration on the bookstore application to split traffic
 
   ![Diagram of Istio bookstore app traffic split](./smi_traffic_split.png)
 
-- Review the [Istio Traffic Split manifest](https://github.com/microsoft/azure-arc-jumpstart-apps/blob/main/bookstore/yaml/istio-virtualservice.yaml) applied to the _ArcBox-K3s-Data_ cluster  
+- Review the [Istio Traffic Split manifest](https://github.com/microsoft/azure-arc-jumpstart-apps/blob/main/bookstore/yaml/istio-virtualservice.yaml) applied to the _ArcBox-K3s-Data_ cluster
 
 - To show the Istio traffic split, open the below windows.
 
