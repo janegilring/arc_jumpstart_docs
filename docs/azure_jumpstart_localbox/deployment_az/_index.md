@@ -18,6 +18,7 @@ Azure Bicep is used to deploy LocalBox into your Azure subscription. Read on to 
   Run the following PowerShell commands to register:
 
   ```powershell
+  Register-AzResourceProvider -ProviderNamespace "Microsoft.Compute"
   Register-AzResourceProvider -ProviderNamespace "Microsoft.HybridCompute"
   Register-AzResourceProvider -ProviderNamespace "Microsoft.GuestConfiguration"
   Register-AzResourceProvider -ProviderNamespace "Microsoft.HybridConnectivity"
@@ -31,11 +32,13 @@ Azure Bicep is used to deploy LocalBox into your Azure subscription. Read on to 
   Register-AzResourceProvider -ProviderNamespace "Microsoft.Storage"
   Register-AzResourceProvider -ProviderNamespace "Microsoft.Insights"
   Register-AzResourceProvider -ProviderNamespace "Microsoft.KeyVault"
+  Register-AzResourceProvider -ProviderNamespace "Microsoft.Network"
   ```
 
   Alternatively, you can register these providers using Azure CLI:
 
   ```shell
+  az provider register --namespace Microsoft.Compute
   az provider register --namespace Microsoft.HybridCompute
   az provider register --namespace Microsoft.GuestConfiguration
   az provider register --namespace Microsoft.HybridConnectivity
@@ -49,6 +52,7 @@ Azure Bicep is used to deploy LocalBox into your Azure subscription. Read on to 
   az provider register --namespace Microsoft.Storage
   az provider register --namespace Microsoft.Insights
   az provider register --namespace Microsoft.Keyvault
+  az provider register --namespace Microsoft.Network
   ```
 
 - Clone the Arc Jumpstart GitHub repository
